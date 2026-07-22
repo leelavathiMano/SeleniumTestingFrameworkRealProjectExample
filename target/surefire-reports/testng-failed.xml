@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [SeleniumFrameworkSuite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.leelavathienterprise.TestComponents.Listeners"/>
+  </listeners>
+  <test thread-count="4" parallel="tests" name="standaloneTest(failed)" verbose="0">
+    <classes>
+      <class name="com.leelavathienterprise.Tests.standaloneTest">
+        <methods>
+          <include name="standaloneE2EFlow" invocation-numbers="1"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="orderTestHistory"/>
+        </methods>
+      </class> <!-- com.leelavathienterprise.Tests.standaloneTest -->
+    </classes>
+  </test> <!-- standaloneTest(failed) -->
+  <test thread-count="4" parallel="tests" name="errorValidations(failed)" verbose="0">
+    <classes>
+      <class name="com.leelavathienterprise.Tests.errorValidations">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="loginErrorValidations"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.leelavathienterprise.Tests.errorValidations -->
+    </classes>
+  </test> <!-- errorValidations(failed) -->
+</suite> <!-- Failed suite [SeleniumFrameworkSuite] -->

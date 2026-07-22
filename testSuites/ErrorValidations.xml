@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SeleniumFrameworkSuite" verbose="1" parallel="tests" thread-count="5">
+<groups>
+    <run>
+    <include name="ErrorValidations"/>
+    </run>
+</groups>
+  <test name="errorValidations" thread-count="5">
+    <classes>
+      <class name="com.leelavathienterprise.Tests.errorValidations" />
+    </classes>
+  </test>
+  <test name="standaloneTestOriginal" thread-count="5">
+    <classes>
+      <class name="com.leelavathienterprise.Tests.standaloneTestOriginal" />
+    </classes>
+  </test>
+  <test name="standaloneTest" thread-count="5">
+    <classes>
+      <class name="com.leelavathienterprise.Tests.standaloneTest" />
+    </classes>
+  </test>
+</suite>
