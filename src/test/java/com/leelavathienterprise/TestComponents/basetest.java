@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import org.openqa.selenium.Dimension;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
@@ -13,6 +14,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -30,9 +32,14 @@ public class basetest {
         FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"//src//main//java//com//leelavathienterprise//resources//GlobalData.properties");
         prop.load(fis);
       String browser=  System.getProperty("browser")!=null?System.getProperty("browser"):prop.getProperty("browser");
-        if(browser.equalsIgnoreCase("chrome")){
-        driver = new ChromeDriver();
-    }
+        if(browser.contains("chrome")){
+            ChromeOptions options = new ChromeOptions();
+            if(browser.contains("headless")){
+            options.addArguments("headless");
+        }
+        driver = new ChromeDriver(options);
+        driver.manage().window().setSize(new Dimension(1440, 900));//full screen
+        }
      else if(browser.equalsIgnoreCase("firefox")){
         driver = new FirefoxDriver();
     } else {

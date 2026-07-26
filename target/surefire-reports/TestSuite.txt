@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 2, Errors: 0, Skipped: 4, Time elapsed: 108.2 s <<< FAILURE! -- in TestSuite
-com.leelavathienterprise.Tests.errorValidations.loginErrorValidations -- Time elapsed: 1.221 s <<< FAILURE!
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 3, Time elapsed: 96.40 s <<< FAILURE! -- in TestSuite
+com.leelavathienterprise.Tests.errorValidations.loginErrorValidations -- Time elapsed: 0.817 s <<< FAILURE!
 java.lang.AssertionError: expected [Incorrect emails or password.] but found [Incorrect email or password.]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
@@ -32,34 +32,19 @@ java.lang.AssertionError: expected [Incorrect emails or password.] but found [In
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
 
-com.leelavathienterprise.Tests.standaloneTest.standaloneE2EFlow[{password=Leela@1990, dressname=ADIDAS ORIGINAL, username=leela123@gmail.com}](2) -- Time elapsed: 13.33 s <<< FAILURE!
-org.openqa.selenium.ElementClickInterceptedException: 
-Element <button class="btn btn-custom"> is not clickable at point (1297,133) because another element <div class="ngx-spinner-overlay ng-tns-c11-1 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating"> obscures it
+com.leelavathienterprise.Tests.errorValidations.productErrorValidations -- Time elapsed: 17.85 s <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of element located by By.id: toast-container (tried for 7 second(s) with 500 milliseconds interval)
 Build info: version: '4.33.0', revision: '2c6aaad03a'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [0f3790df-b7be-4145-84ca-f94e0e8f89bc, clickElement {id=6a699f61-5182-473d-a8a8-1ffb75013ca4}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 153.0, moz:accessibilityChecks: false, moz:buildID: 20260715202819, moz:geckodriverVersion: 0.37.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 2004, moz:profile: C:\Users\leela\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (0f3790df-b7be-4145-84ca-f94e0e8f89bc)] -> css selector: button[routerlink='/dashboard/cart']]
-Session ID: 0f3790df-b7be-4145-84ca-f94e0e8f89bc
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
-	at com.leelavathienterprise.pageobjects.productCatalougePage.goToCartPage(productCatalougePage.java:57)
-	at com.leelavathienterprise.Tests.standaloneTest.standaloneE2EFlow(standaloneTest.java:41)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.129, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\leela\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50153}, goog:processID: 17640, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50153/devtoo..., se:cdpVersion: 150.0.7871.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 69aa450d5b7fa6ecd5446c9d105cade1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.leelavathienterprise.AbstractComponents.abstractComponents.waitForElementToAppear(abstractComponents.java:25)
+	at com.leelavathienterprise.pageobjects.productCatalougePage.addToCart(productCatalougePage.java:52)
+	at com.leelavathienterprise.Tests.errorValidations.productErrorValidations(errorValidations.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)

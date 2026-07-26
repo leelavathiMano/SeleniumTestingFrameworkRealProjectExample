@@ -4,18 +4,6 @@
   <listeners>
     <listener class-name="com.leelavathienterprise.TestComponents.Listeners"/>
   </listeners>
-  <test thread-count="4" parallel="tests" name="standaloneTest(failed)" verbose="0">
-    <classes>
-      <class name="com.leelavathienterprise.Tests.standaloneTest">
-        <methods>
-          <include name="standaloneE2EFlow" invocation-numbers="1"/>
-          <include name="launchApplication"/>
-          <include name="tearDown"/>
-          <include name="orderTestHistory"/>
-        </methods>
-      </class> <!-- com.leelavathienterprise.Tests.standaloneTest -->
-    </classes>
-  </test> <!-- standaloneTest(failed) -->
   <test thread-count="4" parallel="tests" name="errorValidations(failed)" verbose="0">
     <classes>
       <class name="com.leelavathienterprise.Tests.errorValidations">
@@ -23,6 +11,7 @@
           <include name="launchApplication"/>
           <include name="loginErrorValidations"/>
           <include name="tearDown"/>
+          <include name="productErrorValidations"/>
         </methods>
       </class> <!-- com.leelavathienterprise.Tests.errorValidations -->
     </classes>
