@@ -19,7 +19,7 @@ public class standaloneTestOriginal{
         WebDriver driver = new ChromeDriver();
     String dressname="ZARA COAT 3";
       driver.manage().window().maximize();
-      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
       driver.get("https://rahulshettyacademy.com/client/#/auth/login");
       landingPage land=new landingPage(driver);
       land.loginApplication("leelachills123@gmail.com", "Leela@1995");
