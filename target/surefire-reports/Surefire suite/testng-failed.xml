@@ -3,14 +3,11 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.leelavathienterprise.Tests.standaloneTest">
+      <class name="com.leelavathienterprise.Tests.downloadUploadConcept">
         <methods>
-          <include name="standaloneE2EFlow" invocation-numbers="0"/>
-          <include name="launchApplication"/>
-          <include name="orderTestHistory"/>
-          <include name="tearDown"/>
+          <include name="DownloadFile"/>
         </methods>
-      </class> <!-- com.leelavathienterprise.Tests.standaloneTest -->
+      </class> <!-- com.leelavathienterprise.Tests.downloadUploadConcept -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
